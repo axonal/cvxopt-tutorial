@@ -13,3 +13,6 @@ or take a look at the [installation instructions](cvxopt.org/install/index.html)
 ```python clrs.py```
 
 ```python chicken.py```
+
+## Presentation Slides
+[Linear Programming](Linear Programming.pdf)
