@@ -13,6 +13,15 @@ def solve_chicken(solver=None):
     return solvers.lp(c, G, h, A, b, solver=solver)
 
 
+def solve_chicken2(solver=None):
+    c = matrix([1., 1., 1., 1.])
+    G = matrix([[1., 1., 0., 0., -1.], [-2., 0., 0., -1., -1.],
+                [0., -2., -1., 0., -1.], [0., 0., -2., -2., -1.]])
+    h = matrix([0., 0., 0., 0., -1.])
+
+    return solvers.lp(c, G, h, solver=solver)
+
+
 if __name__ == '__main__':
     # suppress output
     solvers.options['show_progress'] = False
@@ -20,3 +29,6 @@ if __name__ == '__main__':
 
     print("objective = {}".format(solve_chicken('glpk')['primal objective']))
     print("x = {}".format(solve_chicken('glpk')['x']))
+
+    print("objective = {}".format(solve_chicken2('glpk')['primal objective']))
+    print("x = {}".format(solve_chicken2('glpk')['x']))
