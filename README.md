@@ -15,4 +15,4 @@ or take a look at the [installation instructions](cvxopt.org/install/index.html)
 ```python chicken.py```
 
 ## Presentation Slides
-[Linear Programming](Linear Programming.pdf)
+[Linear Programming](Linear%20Programming.pdf)
